@@ -20,7 +20,7 @@ void free_data(data_shell *datash)
 }
 
 /**
- * set_data - Initialize data structure
+ * set_data - Initialize data of the structure
  *
  * @datash: data structure
  * @av: argument vector
