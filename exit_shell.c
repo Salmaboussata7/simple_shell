@@ -21,7 +21,7 @@ int exit_shell(data_shell *datash)
 		big_number = ustatus > (unsigned int)INT_MAX;
 		if (!is_digit || str_len > 10 || big_number)
 		{
-			get_error(datash, 2);
+			get_err(datash, 2);
 			datash->status = 2;
 			return (1);
 		}

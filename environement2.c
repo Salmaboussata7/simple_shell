@@ -69,7 +69,7 @@ int _setenv(data_shell *datash)
 
 	if (datash->args[1] == NULL || datash->args[2] == NULL)
 	{
-		get_error(datash, -1);
+		get_err(datash, -1);
 		return (1);
 	}
 
@@ -93,7 +93,7 @@ int _unsetenv(data_shell *datash)
 
 	if (datash->args[1] == NULL)
 	{
-		get_error(datash, -1);
+		get_err(datash, -1);
 		return (1);
 	}
 	k = -1;
@@ -109,7 +109,7 @@ int _unsetenv(data_shell *datash)
 	}
 	if (k == -1)
 	{
-		get_error(datash, -1);
+		get_err(datash, -1);
 		return (1);
 	}
 	realloc_environ = malloc(sizeof(char *) * (i));

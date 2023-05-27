@@ -114,7 +114,7 @@ int is_executable(data_shell *datash)
 	{
 		return (i);
 	}
-	get_error(datash, 127);
+	get_err(datash, 127);
 	return (-1);
 }
 
@@ -129,7 +129,7 @@ int check_error_cmd(char *dir, data_shell *datash)
 {
 	if (dir == NULL)
 	{
-		get_error(datash, 127);
+		get_err(datash, 127);
 		return (1);
 	}
 
@@ -137,7 +137,7 @@ int check_error_cmd(char *dir, data_shell *datash)
 	{
 		if (access(dir, X_OK) == -1)
 		{
-			get_error(datash, 126);
+			get_err(datash, 126);
 			free(dir);
 			return (1);
 		}
@@ -147,7 +147,7 @@ int check_error_cmd(char *dir, data_shell *datash)
 	{
 		if (access(datash->args[0], X_OK) == -1)
 		{
-			get_error(datash, 126);
+			get_err(datash, 126);
 			return (1);
 		}
 	}

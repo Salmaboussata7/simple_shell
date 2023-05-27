@@ -68,7 +68,7 @@ void cd_to(data_shell *datash)
 	dir = datash->args[1];
 	if (chdir(dir) == -1)
 	{
-		get_error(datash, 2);
+		get_err(datash, 2);
 		return;
 	}
 
@@ -153,7 +153,7 @@ void cd_to_home(data_shell *datash)
 
 	if (chdir(home) == -1)
 	{
-		get_error(datash, 2);
+		get_err(datash, 2);
 		free(p_pwd);
 		return;
 	}
